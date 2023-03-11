@@ -1,0 +1,478 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Jua', sans-serif;
+    /* 인터넷창 전체 배경색 */
+    background-color: #F5A9F2;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    
+}
+
+.title {
+    height: 77%;
+}
+
+#h {
+    font-size: 5em;
+}
+/* .file-upload {
+    background-color: #00a6ff;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+} */
+
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #1fb264;
+    border: none;
+    padding: 1px;
+    border-radius: 4px;
+    border-bottom: 4px solid #15824b;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.file-upload-btn:hover {
+    background: #1aa059;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all 0.2s ease;
+}
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.image-upload-wrap1 {
+    /* margin-top: 1%; */
+    /* border: 4px dashed #1fb264; */
+    border: 5px ridge #FF00BF;
+    border-width: 15px;
+    /*float: left; */
+    /*margin-left: -8%; 
+    margin-top: -5%;*/
+    /* relative : 원래 배치되어야 할 위치에서 지정한 값만큼 떨어진곳에 요소를 배치한다.  */
+
+    /* position: relative; */
+    /* padding-left: 1%;
+    
+    padding-bottom: 60%;
+    padding-right: 80%; */
+    height: 110%;
+    width: 121%;
+    /* height : 50px;
+    width : 50px; */
+    /* 이미지 업로드 사진칸 배경색 
+    background-color: #572bd0;*/
+    
+}
+
+.image-upload-wrap2 {
+    /* margin-top: 20px;
+    border: 4px dashed #1fb264; */
+    border: 5px ridge #0000FF;
+    border-width: 15px;
+    /* position: relative; */
+    /* padding-left: 80%;
+    padding-top: 30%;
+    padding-bottom: 60%;
+    padding-right: 1%; */
+    /* height : 50px;
+    width : 50px; */
+    height: 110%;
+    width: 121%;
+    /* margin-left: -12%; 
+    margin-top: -5%; */
+  
+    
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #1fb264;
+    border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #15824b;
+    padding: 130px 0;
+}
+
+.file-upload-image1 {
+    margin-top: -1%;
+    margin-left: -2%;
+
+    float: left;
+    height: 102%;
+    width: 103%;
+    display: none;
+    /* 하얀 공간에 빈공간 줄여주거느 늘여주거나 하는 마진 */
+    /* margin: -10% 0% 0% -6%; */
+}
+.file-upload-image2 {
+    margin-top: -1%;
+    margin-left: -2%;
+    height: 102%;
+    width: 103%;
+    display: none;
+    /* height: 30vh;
+    width: 47vw;
+    margin: -10% 0% 0% -6%;
+    padding: 2px; */
+}
+
+.remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all 0.2s ease;
+}
+#www {
+    font-size: 4em;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 1px 10px;
+    font-size: 8px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+}
+
+/* On mouse-over */
+.btn:hover {
+    background: #eee;
+}
+
+.success {
+    color: green;
+}
+.info {
+    color: dodgerblue;
+}
+.warning {
+    color: orange;
+}
+.danger {
+    color: red;
+}
+.default {
+    color: black;
+}
+
+
+
+
+.file-upload {
+    padding: 1% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+}
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #1fb264;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #15824b;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.file-upload-btn:hover {
+    background: #1aa059;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all 0.2s ease;
+}
+
+#loading {
+    display: none;
+}
+#loading1 {
+    display: none;
+}
+#loading2 {
+    display: none;
+}
+
+.file-upload-input1 {
+    position: absolute;
+    float: left;
+    margin: 0;
+    padding: 0%;
+    width: 60%;
+    height: 100%;
+    outline: none;
+    /*파일선택 버튼 안보이게해주는 코드*/
+    opacity: 0;
+    cursor: pointer;
+    margin-left: -25%;
+}
+.file-upload-input2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+    margin-left: -25%;
+}
+
+.image-upload-wrap {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 10px;
+    border: dashed 1.5px #35465d;
+    background-color: #ffffff;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #35465d82;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+    padding: 0px 0px 0px 0px;
+    color: #222;
+}
+.try-again-btn {
+    border-radius: 20px;
+    border: solid 1.5px #35465d;
+    background-color: #35465d;
+}
+.predict-btn {
+    background-color: #FF0080; /* Green */
+    border: none;
+    color: white;
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    /* display: inline; */
+    /* display : block; */
+    font-size: 16px;
+    /* margin: 4% -84%;  */
+    cursor: pointer;
+    top : 85%;
+    /* margin-top : 50%; */
+    left : 25%;
+    /* margin-right : 60%; */
+    position : fixed; 
+     /* margin : 0 auto;  */
+    width : 50%;
+    margin:auto;
+    display:block;
+    border-radius: 20px;
+    
+    /* position: relative; */
+    
+    /* position : absolute; */
+}
+
+.try-again-text {
+    display: block;
+    font-size: 1.5%;
+    text-align: center;
+    color: #ffffff;
+    padding: 4px 15px;
+}
+
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+input#gender1 {
+    display: none;
+}
+input#gender2 {
+    display: none;
+}
+
+.file-upload1 {
+    position: absolute;
+    width: 48%;
+    height: 30%;
+    background: #ffffff;
+    padding: 1% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    left:0.25%;
+}
+.file-upload2 {
+    position: absolute;
+    width: 48%;
+    height: 30%;
+    background: #ffffff;
+    padding: 1% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffffff;
+    right:0.25%;
+}
+.block1 {
+    height: 1%;
+    width: 100%;
+}
+.text-center {
+    font-size: 100%;
+    font-weight: bold;
+}
+.doneimg {
+    position : absolute;
+    
+    display: none;
+    width : 10%; 
+    height :8%;
+      transform : translate(-50%, 0%);
+    /* left:0; right:0; margin-left:auto; margin-right:auto; */
+    top:50%;
+    /* margin-top : 70%; */
+}
+.result-message{
+    position : absolute;
+    display: none;
+    /* left : 50%; */
+    width : 40%;
+    height :8%;
+    transform : translate(76%, 0%);
+    top:60%; 
+    /* text-align: center; */
+    
+}
+
+.mute-btn {
+    /*position relative : 요소를 원래 위치에서 벗어날수있게 해준다.      */
+     position: absolute;  
+    /* float: right; */
+    bottom: 1%;
+    position : fixed;
+    
+    right : 1%;
+    width : 20%;
+   
+    
+}
+.popup{
+    width : 100vw;
+    /*팝업창 눌르면 헤이트를 높여줘야 가득차게 나온다.*/
+    height : 110%;
+    position : absolute;
+    /* left : 50%; */
+    /* top : 50%; */
+    /* margin-bottom : -100px; */
+    /* transform : translate(-50%, -50%) ; */
+    opacity : 0;
+    background-color : #F6CEF5;
+    font-size : 15px;
+    font-weight : bold;
+    transition : all 0.5s;   
+    /* background-size: contain;
+    background-size: cover; */
+    /*팝업창 내리고 수정할때      */
+       /* z-index : -1;    */
+}
+.popup:target{
+    opacity : 1;
+}
+
+.popupButton{
+    /* top: 60%; */
+    position : absolute;
+    /* display : block; */
+    left : 5%;
+    z-index : 4;
+    cursor: pointer;
+    color: #088A08;
+    
+}
+
+#myBtn{
+    border-radius: 50%;
+    background: #ffffff;
+    width:20%;
+    bottom: 1%;
+    position : fixed;
+    
+    right : 1%;
+    width : 20%;
+    
+
+}
+.muteImg{
+    width : 40%;
+}
+
+#btnShare { display : none; }
+
+

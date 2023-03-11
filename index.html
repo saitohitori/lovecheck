@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+            <!-- Bootstrap CSS -->
+            <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+                integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51"
+                crossorigin="anonymous"
+            />
+            <link rel="stylesheet" href="path/to/fontello/css/fontello.css" />
+
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            />
+            <!--  아이콘 I 버튼        -->
+            <!-- <button class="btn"><i class="fa fa-info"></i></button> -->
+            <a href="#pop1" class="popupButton" onclick="infoClick();" id="id-pop1"
+                ><i class="fa fa-info"></i>
+            </a>
+            <!--
+            <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+            >
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <!--<link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            />
+            <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="popup" id="pop1">
+                Tip
+                <br />
+                
+                It is an application analyzed based on the relationship data of the actual couple relationship.
+                Note that this does not work for things like friend, parent, and child relationships. Please take off your glasses and apply with a natural photo.
+                <br />
+                <br />
+                Reason made
+                <br />
+                In modern times, the divorce rate is very high, and I felt sorry to see this.
+                Commonalities were found in the types of couples, and through this data,
+                I wanted to help couples.
+                <br />
+                <br />
+                Reliability
+                <br />
+                We analyze the big data of numerous couples and can classify the types of people in appearance.
+                I found that I could make better choices based on that. But rather than just talking like this, I'd rather try
+                more sure Test it by inserting a picture of a couple only you know. The results will be interesting. All for free.
+                <br />
+                <br /><font color="#FF00FF">
+                    Soulmate : From our point of view, they are the best match and these types live the happiest
+                </font>
+                <br />
+                <font color="#AC58FA">
+                    Lovebird : Although less than a Soulmate, this type lives happily ever after.
+                </font>
+                <br /><font color="#FF0000"> 
+                    Zeus - Hera : It will be a difficult marriage.
+                </font>    
+                <br /><font color="#4B088A">
+                    Chaos : Please avoid. But not the worst.
+                </font>
+                <br /><font color="#000000">
+                    Cat - Dog : Please avoid.
+                </font>
+                <br />
+                <a href="#a" class="closePopup" onclick="closeClick();">닫기</a>
+            </div>
+            <div style="height: 15%;">
+               
+            </div>
+            <script>
+                function iconHide() {
+                    $('popupButton').hide();
+                }
+
+                function infoClick() {
+                    // 토글 할 버튼 선택 (btn1)
+                    const btn1 = document.getElementById('id-pop1');
+                    if (btn1.style.display !== 'none') {
+                        console.log('btn1 none');
+                        btn1.style.display = 'none';
+                    } else {
+                        btn1.style.display = 'block';
+                    }
+                    $('#predict-id').hide();
+                    $('#mute-btn-id').hide();
+                    $('#file-upload1-id').hide();
+                    $('#file-upload2-id').hide();
+                }
+
+                //       const idbody = document.getElementById('id-body');
+                //      if (idbody.style.display !== 'none'){
+                //           idbody.style.display = 'none';
+                //       }
+                //           else  {
+                //           idbody.style.display = 'block';
+                //       }
+                //  }
+                function closeClick() {
+                    const btn1 = document.getElementById('id-pop1');
+                    btn1.style.display = 'block';
+
+                    // const idbody = document.getElementById('id-body');
+                    // idbody.style.display = 'block';
+                    const popup1 = document.getElementById('pop1');
+                    console.log('클로즈클릭');
+                    $('#predict-id').show();
+                    $('#mute-btn-id').show();
+                    $('#file-upload1-id').show();
+                    $('#file-upload2-id').show();
+                }
+            </script>
+            <title>Break Up Test</title>
+        </head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <!-- <script
+        type="text/javascript"
+        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06"
+    ></script> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
+    <script>
+        window.dataLayer = window.ataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-145482737-6');
+    </script>
+
+    <body>
+        <!-- <div>Teachable Machine Image Model</div>
+         <button type="button" onclick="init()">Start</button>
+        <button type="button" onclick="predict()">예측</button> -->
+        <div id="webcam-container"></div>
+        <div id="label-container1"></div>
+        <div id="label-container2"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+            // the link to your model provided by Teachable Machine export panel
+            // const URL = 'https://teachablemachine.withgoogle.com/models/9CDk6xyPc/';
+
+            let model1,
+                model2,
+                webcam,
+                labelContainer1,
+                labelContainer2,
+                maxPredictions1,
+                maxPredictions2;
+        </script>
+        <!------------------------------------------->
+        <!-- <div class="title">
+        <html>
+
+        <head>
+            <meta charset="UTF-8" />
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Jua&display=swap" rel="stylesheet" />
+
+
+        </head>
+
+    </div> -->
+        <div class="file-upload1" style="float: left;" id="file-upload1-id">
+            <div class="image-upload-wrap1" style="float: left; margin-left: -8%; margin-top: -5%;">
+                <input
+                    class="file-upload-input1"
+                    type="file"
+                    onchange="readURL1(this);"
+                    accept="image/*"
+                />
+                <img
+                    src="img/girl-image_2.png"
+                    width="50%"
+                    height="80%"
+                    id="girlSilhouette"
+                    style="display: block; margin: 0 auto; margin-top: 10%;"
+                />
+                <img class="file-upload-image1" id="face-image1" src="#" alt="image" />
+
+                <!-- 이 클래스를 클릭하면 이미지를 불러올수 있게 해준다. -->
+
+                <div class="drag-text">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                    <!-- <img src="img/upload.svg" class="mt-5 pt-5 upload" /> -->
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">
+                        <!-- 얼굴 사진을 올려놓거나 눌러서 업로드하세요! -->
+                    </h3>
+                </div>
+            </div>
+
+            <div class="file-upload-content1">
+                <!-- 불러온 이미지를 띄워주는 공간 -->
+
+                <div id="loading1" class="animated bounce">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p class="text-center">AI is analyzing..</p>
+                </div>
+
+                <div id="label-container1" class="d-flex flex-column justify-content-around"></div>
+                <!-- <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div> -->
+            </div>
+
+            <!-- <input type="checkbox" id="gender1" />
+        <label for="gender1">
+            <span class="knob">
+                <i></i>
+            </span>
+        </label> -->
+            <!-- <div class="image-title-wrap" style="margin-left: 10%;">
+             <button type="button p-2" class="try-again-btn" onclick="gaReload1();" data-toggle="modal"
+                data-target="#adModal"> 
+                <input class="file-upload-input1" type="file" onchange="readURL1(this);" accept="image/*" />
+                <span class="try-again-text">R</span>
+            </button>
+        </div> -->
+        </div>
+        <!-- ------------------------------------------------------------------------------------------------- -->
+        <div class="file-upload2" style="float: right;" id="file-upload2-id">
+            <div class="image-upload-wrap2" style="margin-left: -12%; margin-top: -5%;">
+                <input
+                    class="file-upload-input2"
+                    type="file"
+                    onchange="readURL2(this);"
+                    accept="image/*"
+                />
+                <img
+                    src="img/boy-image_3.png"
+                    width="50%"
+                    height="80%"
+                    id="boySilhouette"
+                    style="display: block; margin: 0 auto; margin-top: 10%;"
+                />
+                <img
+                    class="file-upload-image2"
+                    id="face-image2"
+                    scr = "#"
+                    alt="image"
+                    style="float: left;"
+                />
+                <!-- <img class="file-upload-image2" id="face-image2" src="#" alt="your image" /> -->
+                <div class="drag-text">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                    <!-- <img src="img/upload.svg" class="mt-5 pt-5 upload" /> -->
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">
+                        <!-- 얼굴 사진을 올려놓거나 눌러서 업로드하세요! -->
+                    </h3>
+                </div>
+            </div>
+
+            <div class="file-upload-content2">
+                <div id="loading2" class="animated bounce">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p class="text-center">AI is analyzing..</p>
+                </div>
+
+                <div id="label-container2" class="d-flex flex-column justify-content-around"></div>
+
+                <!-- 카카오,카카오스토리,라인등 공유하기 기능 -->
+                <!-- <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div> -->
+            </div>
+            <!-- <input type="checkbox" id="gender2" />
+        <label for="gender2">
+            <span class="knob">
+                <i></i>
+            </span>
+        </label> -->
+            <!-- <div class="image-title-wrap" style="margin-left: 10%;">
+            <button type="button p-2" class="try-again-btn" onclick="gaReload1();" data-toggle="modal"
+                data-target="#adModal">
+                <span class="try-again-text">Retry</span>
+            </button>
+        </div> -->
+        </div>
+        <div class="block1">
+            <!-- <span>asdfasdfasdf</span> -->
+        </div>
+        
+        
+            
+        
+        <img src="img/done.png" class="doneimg" />
+        <p class="result-message"></p>
+         
+        <button
+            type="button p-2"
+            class="predict-btn"
+            onclick="letsgopredict();gaReload2();"
+            data-toggle="modal"
+            id="predict-id"
+        >
+            <!--버튼에서 잠시 뺌 data-target="#adModal" -->
+            <span class="predict-text">Start</span>
+            <span class="try-again-text"></span>
+        </button>
+
+        <div
+            class="modal fade"
+            id="adModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="adModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="adModalLabel">
+                            (AD)광고 - 재시도를 한번 더 눌러주세요.
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <ins
+                            class="kakao_ad_area"
+                            style="display: none;"
+                            data-ad-unit="DAN-t89oh3sc0ew5"
+                            data-ad-width="300"
+                            data-ad-height="250"
+                        ></ins>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button p-2" class="try-again-btn" onclick="gaReload2();">
+                            <span class="try-again-text">다른 사진으로 재시도</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script
+            type="text/javascript"
+            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63550914fb6a811c"
+        ></script> -->
+        <script>
+            function gaReload1() {
+                gtag('event', '다른 사진으로 재시도 1차', {
+                    event_category: '다른 사진으로 재시도',
+                });
+            }
+            // function gaReload2() {
+            //     gtag('event', '다른 사진으로 재시도 2차', {
+            //         event_category: '다른 사진으로 재시도',
+            //     });
+            //     window.location.reload();
+            // }
+        </script>
+        <script>
+            // (function () {
+            //     var d = document,
+            //         s = d.createElement('script');
+            //     s.src = 'https://jocoding.disqus.com/embed.js';
+            //     s.setAttribute('data-timestamp', +new Date());
+            //     (d.head || d.body).appendChild(s);
+            // })();
+        </script>
+        <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <!-- <div class="addthis_inline_share_toolbox_ww2q"></div> -->
+        <script type="text/javascript">
+            //let URL;
+            // const urlMale = 'https://teachablemachine.withgoogle.com/models/9CDk6xyPc';
+            // const urlFemale = 'https://teachablemachine.withgoogle.com/models/9CDk6xyPc';
+            // const urlBreakUp = 'https://teachablemachine.withgoogle.com/models/QOMHp2ogY';
+
+            // async function init() {
+            //     if (document.getElementById('gender').checked) {
+            //     //    URL = urlMale;
+            //         URL = urlBreakUp;
+            //     } else {
+            //     //    URL = urlFemale;
+            //         URL = urlBreakUp;
+
+            //     }
+            //     const modelURL = URL + 'model.json';
+            //     const metadataURL = URL + 'metadata.json';
+            //     model = await tmImage.load(modelURL, metadataURL);
+            //     maxPredictions = model.getTotalClasses();
+            //     labelContainer = document.getElementById('label-container');
+            //     for (let i = 0; i < maxPredictions; i++) {
+            //         var element = document.createElement('div');
+            //         element.classList.add('d-flex');
+            //         labelContainer.appendChild(element);
+            //     }
+            // }
+        </script>
+        <script type="text/javascript"></script>
+        <!--</body>
+                    
+                     <input type="checkbox" id="gender" />
+                    <label for="gender">
+                        <span class="knob">
+                            <i></i>
+                        </span>
+                    </label> -->
+        <div>
+            <audio loop id="hbAudio">
+                <source src="audio/Heartbeat/Heart beat_byme5.mp3" type="audio/mp3" />
+            </audio>
+            <audio id="idSM">
+                <source src="audio/Soulmate/Soulmate.mp3" type="audio/mp3" />
+            </audio>
+            <audio id="idIK">
+                <source src="audio/Inko/inko.mp3" type="audio/mp3" />
+            </audio>
+            <audio id="idZH">
+                <source src="audio/zeus-hera/Lighting.mp3" type="audio/mp3" />
+            </audio>
+            <audio id="idCO">
+                <source src="audio/Chaos/Chaos.mp3" type="audio/mp3" />
+            </audio>
+            <audio id="idCD">
+                <source src="audio/cat-dog/cat-dog.mp3" type="audio/mp3" />
+            </audio>
+        </div>
+        <script>
+            var hba = document.getElementById('hbAudio');
+
+            var sma = document.getElementById('idSM');
+            var ika = document.getElementById('idIK');
+            var zha = document.getElementById('idZH');
+            var coa = document.getElementById('idCO');
+            var cda = document.getElementById('idCD');
+        </script>
+
+        <script>
+            function readURL1(input) {
+                
+                sma.pause();
+                    ika.pause();
+                    zha.pause();
+                    coa.pause();
+                    cda.pause();
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        // $('.image-upload-wrap1').hide();
+                        $('#girlSilhouette').hide();
+                        $('#loading1').show();
+                        hba.play();
+                        $('.doneimg').hide();
+                        $('.file-upload-image1').show();
+                        $('.file-upload-image1').attr('src', e.target.result);
+                        $('.file-upload-content1').show();
+                        $('.image-title').html(input.files[0].name);
+                        $('.result-message').hide();
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    console.log('init1 에러');
+                    init1().then(function () {
+                        console.log('시작합니다');
+                        //predict();
+                        $('#loading1').hide();
+                    });
+                } else {
+                    removeUpload();
+                }
+
+                function removeUpload() {
+                    $('.file-upload-input1').replaceWith($('.file-upload-input1').clone());
+                    $('.file-upload-content1').hide();
+                    $('.image-upload-wrap1').show();
+                }
+                $('.image-upload-wrap1').bind('dragover', function () {
+                    $('.image-upload-wrap1').addClass('image-dropping');
+                });
+                $('.image-upload-wrap1').bind('dragleave', function () {
+                    $('.image-upload-wrap1').removeClass('image-dropping');
+                });
+            }
+
+            function readURL2(input) {
+                
+               sma.pause();
+                    ika.pause();
+                    zha.pause();
+                    coa.pause();
+                    cda.pause();
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        //$('.image-upload-wrap2').hide();
+                        $('#boySilhouette').hide();
+                        $('#loading2').show();
+                        hba.play();
+                        $('.doneimg').hide();
+                        $('.file-upload-image2').show();
+                        $('.file-upload-image2').attr('src', e.target.result);
+                        $('.file-upload-content2').show();
+                        $('.image-title').html(input.files[0].name);
+                        $('.result-message').hide();
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                    init2().then(function () {
+                        console.log('시작합니다');
+                        //predict();
+                        $('#loading2').hide();
+                        //$('.doneimg').hide();
+                    });
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input2').replaceWith($('.file-upload-input2').clone());
+                $('.file-upload-content2').hide();
+                $('.image-upload-wrap2').show();
+            }
+            $('.image-upload-wrap2').bind('dragover', function () {
+                $('.image-upload-wrap2').addClass('image-dropping');
+            });
+            $('.image-upload-wrap2').bind('dragleave', function () {
+                $('.image-upload-wrap2').removeClass('image-dropping');
+            });
+        </script>
+
+        <div id="webcam-container"></div>
+        <div id="label-container"></div>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+            // the link to your model provided by Teachable Machine export panel
+
+            // Load the image model and setup the webcam
+            const URL1 = 'https://teachablemachine.withgoogle.com/models/F2BwYbgLw/';
+            const URL2 = 'https://teachablemachine.withgoogle.com/models/MVwDqG0BX/';
+            async function init1() {
+                console.log(URL1);
+
+                const modelURL1 = URL1 + 'model.json';
+                const metadataURL1 = URL1 + 'metadata.json';
+
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model1 = await tmImage.load(modelURL1, metadataURL1);
+                maxPredictions1 = model1.getTotalClasses();
+                labelContainer1 = document.getElementById('label-container1');
+
+                for (let i = 0; i < maxPredictions1; i++) {
+                    // and class labels
+                    //labelContainer.appendChild(document.createElement('div'));
+                    var element = document.createElement('div');
+                    element.classList.add('d-flex');
+                    labelContainer1.appendChild(element);
+                }
+            }
+            async function init2() {
+                const modelURL2 = URL2 + 'model.json';
+                const metadataURL2 = URL2 + 'metadata.json';
+
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model2 = await tmImage.load(modelURL2, metadataURL2);
+                maxPredictions2 = model2.getTotalClasses();
+                labelContainer2 = document.getElementById('label-container2');
+
+                for (let i = 0; i < maxPredictions2; i++) {
+                    // and class labels
+                    //labelContainer.appendChild(document.createElement('div'));
+                    var element = document.createElement('div');
+                    element.classList.add('d-flex');
+                    labelContainer2.appendChild(element);
+                }
+            }
+
+            // async function init() {
+
+            //         if (document.getElementById('gender').checked) {
+            //         //    URL = urlMale;
+            //             URL = urlBreakUp;
+            //         } else {
+            //         //    URL = urlFemale;
+            //             URL = urlBreakUp;
+
+            //         }
+            //         const modelURL = URL + 'model.json';
+            //         const metadataURL = URL + 'metadata.json';
+            //         model = await tmImage.load(modelURL, metadataURL);
+            //         maxPredictions = model.getTotalClasses();
+            //         labelContainer = document.getElementById('label-container');
+            //         for (let i = 0; i < maxPredictions; i++) {
+            //             // var element = document.createElement('div');
+            //             // element.classList.add('d-flex');
+            //             // labelContainer.appendChild(element);
+            //             labelContainer.appendChild(document.createElement('div'));
+            //         }
+            //     }
+
+            // run the webcam image through the image model
+
+            // async function predict() {
+            //     // predict can take in an image, video or canvas html element
+            //     var image = document.getElementById('face-image1');
+            //     const prediction = await model.predict(image, false);
+            //     for (let i = 0; i < maxPredictions; i++) {
+            //         const classPrediction =
+            //             prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+            //         labelContainer.childNodes[i].innerHTML = classPrediction;
+            //     }
+            // }
+            async function predict2() {
+                var image1 = document.getElementById('face-image1');
+
+                var image2 = document.getElementById('face-image2');
+
+                const prediction1 = await model1.predict(image1, false);
+                const prediction2 = await model2.predict(image2, false);
+                prediction1.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                prediction2.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction1[0].className + '프레딕션1');
+                console.log(prediction2[0].className + '프레딕션2');
+
+                var resultTitle, resultExplain, resultCeleb;
+                // if  (document.getElementById("gender1").checked && document.getElementById("gender2").checked){
+                //     gtag('event', 'Will We Break Up?',{
+                //         'event_category' : 'Will We Break Up?'
+                //     });
+                //     }
+
+                // resultTitle = "가나다";
+                // resultExplain = "라마바";
+                // resultCeleb = "사아자";
+                // var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                // var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
+                // var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                //이코드가 실행되면 init함수가 실행되면서 무한로딩이 시작된다.
+                // var title = "<div class'" = resultTitle +"</div>"
+                //$('.result-message').html(title + explain + celeb);
+
+                if (prediction1[0].className == 'girlA' && prediction2[0].className == 'boyA') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Cat-dog';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    cda.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+
+                if (prediction1[0].className == 'girlA' && prediction2[0].className == 'boyB') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Zeus - Hera';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    zha.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlA' && prediction2[0].className == 'boyC') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Chaos';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    coa.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlA' && prediction2[0].className == 'boyD') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Soulmate';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    sma.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlA' && prediction2[0].className == 'boyE') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Lovebird';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    ika.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+
+                if (prediction1[0].className == 'girlB' && prediction2[0].className == 'boyA') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Lovebird';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    ika.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlB' && prediction2[0].className == 'boyB') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Cat-dog';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    cda.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlB' && prediction2[0].className == 'boyC') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Zeus - Hera';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    zha.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlB' && prediction2[0].className == 'boyD') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Chaos';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    coa.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlB' && prediction2[0].className == 'boyE') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Soulmate';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    sma.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+
+                if (prediction1[0].className == 'girlC' && prediction2[0].className == 'boyA') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Soulmate';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    sma.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlC' && prediction2[0].className == 'boyB') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Lovebird';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    ika.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlC' && prediction2[0].className == 'boyC') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Cat-dog';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    cda.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlC' && prediction2[0].className == 'boyD') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Zeus - Hera';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    zha.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlC' && prediction2[0].className == 'boyE') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Chaos';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    coa.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+
+                if (prediction1[0].className == 'girlD' && prediction2[0].className == 'boyA') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Chaos';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    coa.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+
+                if (prediction1[0].className == 'girlD' && prediction2[0].className == 'boyB') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Soulmate';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    sma.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlD' && prediction2[0].className == 'boyC') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Lovebird';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    ika.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlD' && prediction2[0].className == 'boyD') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Cat-dog';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    cda.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlD' && prediction2[0].className == 'boyE') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Zeus - Hera';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    zha.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+
+                if (prediction1[0].className == 'girlE' && prediction2[0].className == 'boyA') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Zeus - Hera';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    zha.play();
+
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+
+                if (prediction1[0].className == 'girlE' && prediction2[0].className == 'boyB') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Chaos';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    coa.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlE' && prediction2[0].className == 'boyC') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Soulmate';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    sma.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlE' && prediction2[0].className == 'boyD') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Lovebird';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    ika.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+                if (prediction1[0].className == 'girlE' && prediction2[0].className == 'boyE') {
+                    //resultTitle = "요를레이후";
+                    resultExplain = 'Cat-dog';
+                    //var title = "<div class='" + prediction1[0].className + "-animal-title'>" + resultTitle + "</div>"
+                    var explain = "<div class='animal-explain pt-2'>" + resultExplain + '</div>';
+                    //var celeb = "<div class='" + prediction1[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+                    cda.play();
+                    $('.doneimg').show();
+                    $('.result-message').show();
+                    $('.result-message').html(explain);
+                }
+            }
+        </script>
+
+        <script>
+            function letsgopredict() {
+                predict2();
+                hba.pause();
+            }
+            function stopAudio() {
+                hba.volume = 0.0;
+            }
+        </script>
+        <!-- <button class="mute-btn" id="mute-btn-id">
+            mute
+        </button>  -->
+
+        <!-- <input type="button" id="myBtn" onclick="tgl();" src="img/mute/soundPlay_1.png">  -->
+
+        <div class="muteButton">
+            <button id="myBtn" onClick="tgl();">
+                <img id="idMute" src="./img/mute/soundPlay_1.png" class="muteImg" />
+            </button>
+        </div>
+
+        <script>
+            var cnt = 1;
+            // function tgl() {
+            //     console.log('tgl실행1');
+            //     var t = document.getElementById('idMute');
+            //     console.log('tgl실행1.1');
+            //     if (t.src = './img/mute/soundPlay_1.png') {
+            //         console.log('tgl실행2');
+            //         //t.src='./img/mute/mute.png'
+
+            //         document.getElementById('idMute').src = './img/mute/mute.png';
+            //         console.log(t.src);
+            //     }
+
+            // }
+            //     else if(t.src='./img/mute/mute.png'){
+            //     console.log("tgl실행3");
+            //       t.src='./img/mute/soundPlay_1.png';}
+            // }
+
+            function tgl() {
+                console.log('tgl실행');
+                var img1 = document.getElementById('idMute');
+
+                if (cnt % 2 == 1) {
+                    console.log('tgl실행1');
+                    img1.src = './img/mute/mute.png';
+                    hba.volume = 0.0;
+                    sma.volume = 0.0;
+                    ika.volume = 0.0;
+                    zha.volume = 0.0;
+                    coa.volume = 0.0;
+                    cda.volume = 0.0;
+                    //img1.src = "./img/mute/soundPlay_1.png";
+                } else {
+                    //img1.src="./img/mute/soundPlay_1.png";
+                    img1.src = './img/mute/soundPlay_1.png';
+                    hba.volume = 1.0;
+                    sma.volume = 1.0;
+                    ika.volume = 1.0;
+                    zha.volume = 1.0;
+                    coa.volume = 1.0;
+                    cda.volume = 1.0;
+                }
+                cnt++;
+            }
+        </script>
+    
+    </body>
+    
+    <!-- 카카오톡라인 이메일어플 종합버튼  -->
+     <!-- <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+    ></script>  -->
+    <!-- Copyright (c) 2023 by Kim Dong In (https://codepen.io/DongInKim/pen/ZEQRYRR)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+    files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+    modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 
+    furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+    IABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+    IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+</html>
